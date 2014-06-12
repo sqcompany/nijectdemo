@@ -7,9 +7,8 @@ using domain.Entities;
 
 namespace domain.Abstract
 {
-    public interface IBookRepository<T>
+    public interface IBookRepository
     {
-        IQueryable<T> Books;
-        IQueryable<T> Where(Expression<Func<T, bool>> predicate, bool showDeleted = false);
+        IQueryable<book> Books { get; }
     }
 }
