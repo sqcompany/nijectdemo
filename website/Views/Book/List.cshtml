@@ -1,0 +1,12 @@
+﻿@model IEnumerable<domain.Entities.book>
+@{
+    ViewBag.Title = "书架";
+}
+<h2>书架</h2>
+@foreach (var b in Model)
+{
+    <div style="border-bottom:1px dashed silver;">
+        <h3>@b.Title</h3>
+        <p>价格：@b.Price.ToString("c")</p>
+    </div>
+}
