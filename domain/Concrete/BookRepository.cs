@@ -8,7 +8,7 @@ using domain.Entities;
 
 namespace domain.Concrete
 {
-    public class BookRepository<T> : IBookRepository<T>
+    public class BookRepository : IBookRepository
     {
         private EFDbContext context = new EFDbContext();
         public IQueryable<book> Books
